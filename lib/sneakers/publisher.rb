@@ -34,7 +34,7 @@ module Sneakers
     end
 
     def create_bunny_connection
-      Bunny.new(@opts[:amqp], :vhost => @opts[:vhost], :heartbeat => @opts[:heartbeat], :logger => Sneakers::logger)
+      Bunny.new(@opts[:amqp], :vhost => @opts[:vhost], :heartbeat => @opts[:heartbeat], :logger => Sneakers::logger, :properties => @opts[:properties])
     end
   end
 end
